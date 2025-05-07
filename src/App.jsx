@@ -38,8 +38,10 @@ export default function App() {
   return (
     <div className="container">
       <h1>Phonebook</h1>
-      <ContactForm onAdd={addContact} />
-      <SearchBox value={filter} onChange={setFilter} />
+      <div className="form-wrapper">
+        <ContactForm onAdd={addContact} />
+        <SearchBox value={filter} onChange={setFilter} />
+      </div>
       <ContactList contacts={filteredContacts} onDelete={deleteContact} />
     </div>
   );
