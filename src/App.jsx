@@ -24,6 +24,15 @@ export default function App() {
   }, [contacts]);
 
   const addContact = (newContact) => {
+    const nameExists = contacts.some(
+      (c) => c.name.toLowerCase() === newContact.name.toLowerCase()
+    );
+
+    if (nameExists) {
+      alert(`${newContact.name} is already in contacts.`);
+      return;
+    }
+
     setContacts((prev) => [...prev, newContact]);
   };
 

@@ -9,6 +9,7 @@ const ContactSchema = Yup.object().shape({
     .max(50, "Too Long!")
     .required("Required"),
   number: Yup.string()
+    .matches(/^[0-9\- ]+$/, "Only digits, spaces and dashes allowed")
     .min(3, "Too Short!")
     .max(50, "Too Long!")
     .required("Required"),
