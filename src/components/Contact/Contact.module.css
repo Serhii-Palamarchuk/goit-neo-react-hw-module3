@@ -1,5 +1,5 @@
 .item {
-  width: 330px; /* ← фіксована ширина */
+  width: 230px; /* ← фіксована ширина */
   display: flex;
   justify-content: space-between;
   align-items: center;
